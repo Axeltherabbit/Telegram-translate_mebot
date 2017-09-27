@@ -33,7 +33,7 @@ bot.on('inlineQuery', msg => {
        answers.addArticle({
             id: 'query',
             title: 'Translation',
-            description: `${query} => : `,
+            description: trad,
             message_text: trad
                          });
        return bot.answerQuery(answers);                 });
