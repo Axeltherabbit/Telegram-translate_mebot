@@ -27,15 +27,16 @@ bot.on('inlineQuery', msg => {
     // Create a new answer list object
     const answers = bot.answerList(msg.id, {cacheTime: 60});
     
+    //translate fun
     translate(`${query}`, { to: 'en' }).then(res => {
-    const trad = res.text;
-    answers.addArticle({
-        id: 'query',
-        title: 'Translation',
-        description: `${query} => : `,
-        message_text: trad
-                      });
-    return bot.answerQuery(answers);                           });
+       const trad = res.text;
+       answers.addArticle({
+            id: 'query',
+            title: 'Translation',
+            description: `${query} => : `,
+            message_text: trad
+                         });
+       return bot.answerQuery(answers);                 });
             
                                           
     
