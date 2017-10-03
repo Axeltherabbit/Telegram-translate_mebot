@@ -3,7 +3,7 @@ const translate = require('google-translate-api');
  
 
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '450898044:AAFHzjcYYKjYokpNZjFZx8Yao3pqno_UY6g';
+const token = 'YOURTOKENHERE';
 
 const bot = new TeleBot
 ({
