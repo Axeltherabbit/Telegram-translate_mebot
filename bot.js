@@ -9,10 +9,10 @@ const bot = new TeleBot
 ({
     token: token, // Required. Telegram Bot API token.
     polling: { // Optional. Use polling.
-        interval: 1000, // Optional. How often check updates (in ms).
-        timeout: 0, // Optional. Update polling timeout (0 - short polling).
+        interval: 500, // Optional. How often check updates (in ms).
+        timeout: 0.1, // Optional. Update polling timeout (0 - short polling).
         limit: 100, // Optional. Limits the number of updates to be retrieved.
-        retryTimeout: 5000, // Optional. Reconnecting timeout (in ms).
+        retryTimeout: 10, // Optional. Reconnecting timeout (in ms).
         //proxy: 'http://username:password@yourproxy.com:8080' // Optional. An HTTP proxy to be used.
              },
 });
@@ -36,10 +36,8 @@ bot.on('inlineQuery', msg => {
             description: trad,
             message_text: trad
                          });
-       return bot.answerQuery(answers);                 });
-            
-                                          
-    
-});
+       return bot.answerQuery(answers);}).catch(err => {console.error(err);});
+           
+    })
 
 bot.start();
