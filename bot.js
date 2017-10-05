@@ -30,12 +30,15 @@ bot.on('inlineQuery', msg => {
     //translate fun
     translate(`${query}`, { to: 'en' }).then(res => {
        const trad = res.text;
-       answers.addArticle({
-            id: 'query',
-            title: 'Translation',
-            description: trad,
-            message_text: trad
-                         });
+       if (trad != "")
+          {
+           answers.addArticle({
+               id: 'query',
+               title: 'Translation',
+               description: trad,
+               message_text: trad
+                             });
+           }
        return bot.answerQuery(answers);}).catch(err => {console.error(err);});
            
     })
