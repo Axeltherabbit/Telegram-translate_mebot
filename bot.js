@@ -12,7 +12,7 @@ const bot = new TeleBot
         interval: 500, // Optional. How often check updates (in ms).
         timeout: 0.1, // Optional. Update polling timeout (0 - short polling).
         limit: 100, // Optional. Limits the number of updates to be retrieved.
-        retryTimeout: 10, // Optional. Reconnecting timeout (in ms).
+        retryTimeout: 2500, // Optional. Reconnecting timeout (in ms).
         //proxy: 'http://username:password@yourproxy.com:8080' // Optional. An HTTP proxy to be used.
              },
 });
