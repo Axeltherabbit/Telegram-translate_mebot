@@ -1,7 +1,7 @@
 const TeleBot = require('telebot');
 const translate = require('google-translate-api');
-const fs = require('fs'); //for read json
 
+const fs = require('fs'); //for read json
 var j = JSON.parse(fs.readFileSync('languages.json', 'utf8'));
 
 // replace the value below with the Telegram token you receive from @BotFather
