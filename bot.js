@@ -20,7 +20,7 @@ const bot = new TeleBot
 });
 bot.on(['/start', '/help'],
       (msg) => msg.reply.text("This bot work only inline\ntype: @translate_mebot TEXT\n\
-it will translate it thanks to google translate\n\n\
+it will translate thanks to google translate\n\n\
 Default translation : from detected_language to english\n\
 How change language:\n\
 @translate_mebot !fromlanguage:tolanguage TEXT\n\
